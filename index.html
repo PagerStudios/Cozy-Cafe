@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozy Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="logo-circle"></div>
+  <header>
+    <div class="container">
+      <h1>Cozy Café</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+
+  </header>
+
+
+
+  <section class="hero">
+    <div class="container">
+      <h2>Your neighborhood coffee spot</h2>
+      <p>Locally roasted beans. Handcrafted drinks. Warm vibes.</p>
+      <a href="assets/pdfs/menu.pdf" target="_blank" class="btn">View Menu</a>
+    </div>
+    
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h3>About Us</h3>
+      <p>
+        At Cozy Café, we believe that great coffee is just the beginning. 
+        Established in 2022, we set out with a simple mission — to create a warm, welcoming space where comfort, community, and craftsmanship come together. 
+        Nestled in the heart of the neighborhood, our café has quickly become a local favorite. 
+        Whether you're grabbing your morning brew, catching up with friends, or settling in with a book, Cozy Café is your home away from home.
+        <br>
+        <br>
+        Our beans are locally roasted in small batches, ensuring every cup is fresh, flavorful, and full of character. 
+        From handcrafted lattes to decadent pastries baked daily, everything we serve is made with care and a genuine love for what we do. 
+        We’re proud to support local growers, bakers, and makers — because just like a good cup of coffee, we know it’s the little things that make a big difference. 
+        So come in, take a seat, and stay a while. 
+        You’re always welcome here.
+        <br>
+        <br>
+        <h4>Follow us on:</h4>
+        <br>
+        <a href="https://www.instagram.com/" target="_blank" class="social-link">Instagram</a>
+        <a href="https://www.facebook.com/" target="_blank" class="social-link">Facebook</a>
+        <br>
+        <br>
+        <a href="https://x.com/" target="_blank" class="social-link">Twitter</a>
+
+    </p>
+    <br>
+    <br>
+    <h4>📍  Located at 123 Coffee St. Cozy Suburb, Sydney</h4>
+
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h3>Contact Us</h3>
+      <div class="form-wrapper">
+<h4>    Give us a call:
+</h4>
+<p>+61 4xx xxx xxx</p>
+    </div>
+      <div class="form-wrapper">
+        <div class="form-section">
+        <h4>    Contact us by Email:
+        </h4>
+      <form onsubmit="return sendEmail();">
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+  
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+  
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </div>
+
+  <div class="form-logo-abs">
+    <img src="assets/images/coffeelogo.png" alt="Cozy Café Logo">
+  </div>
+    </div>
+</div>
+  </section>
+  
+  <script>
+    function sendEmail() {
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+  
+      const mailtoLink = `mailto:your@email.com?subject=Contact%20Form%20Message&body=From:%20${encodeURIComponent(email)}%0A%0A${encodeURIComponent(message)}`;
+  
+      window.location.href = mailtoLink;
+      return false; // prevent default form submission
+    }
+  </script>
+
+  <footer>
+    <div class="footer-row container">
+      <p class="footer-credit">© Designed and Produced by Pager Studios.</p>
+      <p ><a href="mailto:studios.pager@gmail.com">📫  Studios.Pager@gmail.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 1);
+    });
+  </script>
+  
+  
+
+</body>
+</html>
